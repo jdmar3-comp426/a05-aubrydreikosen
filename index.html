@@ -3,71 +3,81 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title></title>
-    <!--script tag-->
-    <script src = "form.js"></script>
+    <title>Leprechauns</title>
+    <script src="forms.js"></script>
+    
 </head>
 
-<div>
-    <div>
+<body>
+    <header>
+        <h1><strong>Leprechauns</strong></h1>
+        <p> The subject of everything from childrens books to horror movies- leprechauns are the most versatile mythical creature to ever exist. I am here to answer all of the important questions about leprechauns.</p>
+        <ol>
+            <li><a href="./CuteVEvil.html">Are leprechauns cute and cuddley or scary and evil?</a></li>
+            <li><a href="./importance.html">Why are leprechauns even important?</a></li>
+            <li><a href="./power.html">Do leprechauns have any cool powers?</a></li>
+        </ol>
+    </header>
+    <main>
         <div>
-            <h1>Login</h1>
-            <form>
-                <div>
-                    <label>Username</label>
-                    <div>
-                        <input type="text" placeholder="John Doe" name="username">
-                    </div>
-                </div>
-                <div>
-                    <label>Password</label>
-                    <div>
-                        <input type="password" placeholder="password123" name="password">
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <label>
-                            <input type="checkbox" name="remember">
-                            Remember login?
-                        </label>
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <button type="submit">Submit</button>
-                    </div>
-                </div>
-            </form>
+            <h2>What even is a Leprechaun?</h2>
+            <p>A leprecahun is a mytholigcal creature identified as a fairy. Leprechauns are known as solitary creatures and most often play mischevious pranks on people. Popular culutre has crafted the image of a leprechaun to be a mischevious shoemaker
+                that hides pots of gold at the end of a rainbow. We all can identify leprecahuns as the mascot of the delicious Kellog cereal Lucky Charms, but leprecahus are so much more than that. They are important in Irish folklore although they were
+                not often referenced in Irish mythology.
+            </p>
+            <div class="row">
+                <figure class="column">
+                    <img alt="Old timey depiction of leprechaun" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/58/Leprechaun_engraving_1900.jpg/170px-Leprechaun_engraving_1900.jpg">
+                    <figcaption>Image from <a href="//upload.wikimedia.org/wikipedia/commons/thumb/5/58/Leprechaun_engraving_1900.jpg/170px-Leprechaun_engraving_1900.jpg">Wikimedia</a></figcaption>
+                </figure>
+                <figure class="column">
+                    <img class="reverse" alt="Lucky charms cereal" src="https://upload.wikimedia.org/wikipedia/commons/1/13/2020-05-03_09_43_50_A_sample_of_General_Mills_Lucky_Charms_cereal_in_the_Franklin_Farm_section_of_Oak_Hill%2C_Fairfax_County%2C_Virginia.jpg" width="400px"
+                        height="300px">
+                    <figcaption>Image from <a href="https://upload.wikimedia.org/wikipedia/commons/1/13/2020-05-03_09_43_50_A_sample_of_General_Mills_Lucky_Charms_cereal_in_the_Franklin_Farm_section_of_Oak_Hill%2C_Fairfax_County%2C_Virginia.jpg">Wikimedia</a></figcaption>
+                </figure>
+            </div>
         </div>
+        <br>
         <div>
-            <h1>Signup</h1>
-            <form>
-                <div>
-                    <label>Username</label>
-                    <div>
-                        <input type="text" placeholder="John Doe" name="username">
-                    </div>
-                </div>
-                <div>
-                    <label>Password</label>
-                    <div>
-                        <input type="password" placeholder="password12345">
-                    </div>
-                </div>
-                <div>
-                    <label>Repeat Password</label>
-                    <div>
-                        <input type="password" placeholder="password12345" name="password">
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <button type="submit">Submit</button>
-                    </div>
-                </div>
-            </form>
+            <h2>Why are leprechauns important to me?</h2>
+            <p> As a junior and senior in high school I worked at a local Irish pub called Dohertys despite not being Irish in the slightest. I spent many of my night listenting to Irish music and being surrounded by various cheesy Irish souvenirs. I worked
+                St Paddy's day weekend at the pub and many people came dressed as leprechauns and I spent the entire weekend fully immersed in over the top Irish culture. I even had leprecahun face tattoos on that I was unable to get off for multiple
+                days after. Thus leprechauns are near and dear to my heart and I would love to spread awareness about them.
+            </p>
+            <div class="row">
+                <figure class="column">
+                    <img class="reverse" alt="Irish pub sign" src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Irish_pub_Ohrid.jpg" width="400px" height="300px">
+                    <figcaption>Image from <a href="https://upload.wikimedia.org/wikipedia/commons/6/6e/Irish_pub_Ohrid.jpg">Wikimedia</a></figcaption>
+                </figure>
+                <figure class="column">
+                    <img alt="St Patricks day celebration" src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Man_in_Leprechaun_Outfit_on_St_Patrick%27s_Day.jpg" width="200px" height="300px">
+                    <figcaption>Image from <a href="https://upload.wikimedia.org/wikipedia/commons/e/e2/Man_in_Leprechaun_Outfit_on_St_Patrick%27s_Day.jpg">Wikimedia</a></figcaption>
+                </figure>
+            </div>
         </div>
-    </div>
-</div>
-</section>
+    </figure>
+    <p>
+        Please sign up for an account!
+        <form id = "signup">
+            <label for = "user">Username: </label>
+            <input type = "text" id = "user" name="user" value ="">
+            <label for = "email">Email: </label>
+            <input type = "text" id = "email" name="email" value = "">
+            <label for = "pass">Password: </label>
+            <input id = "pass" name="pass" type = "password" value = "">
+            <input type = "submit" value ="Submit">
+        </form>
+    </p>
+    </main>
+    <footer>
+        <p>I would like to clarify that anything written is satire though based on facts and I am not in fact this passionate about leprechauns.
+        </p>
+        <p>
+            <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                <img src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!">
+            </a>
+        </p>
+    </footer>
+</body>
+
+</html>
