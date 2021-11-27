@@ -6,7 +6,7 @@ var db = require('./database.js')
 // Require md5 MODULE
 var md5 = require("md5")
 //require the cors module 
-const cors = require("cors")
+var cors = require("cors")
 // Make Express use its own built-in body parser
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -28,7 +28,7 @@ app.get("/app/", (req, res, next) => {
 // Define other CRUD API endpoints using express.js and better-sqlite3
  
 // CREATE a new user (HTTP method POST) at endpoint /app/new/
-app.post("/app/new/user", (req, res) => {	
+app.post("/app/new/", (req, res) => {	
 	var data = {
 		user: req.body.user,
 		pass: req.body.pass ? md5(req.body.pass) :null ,
