@@ -25,7 +25,7 @@ app.get("/app/", (req, res, next) => {
  
 // CREATE a new user (HTTP method POST) at endpoint /app/new/
 app.post("/app/new/", (req, res) => {	
-	const stmt = db.prepare("INSERT INTO userinfo (user, pass) VALUES (?, ?)").run(req.body.user, md5(req.body.pass));
+	const stmt = db.prepare("INSERT INTO userinfo (user, pass, email) VALUES (?, ?, ?)").run(req.body.user, md5(req.body.pass), req.body.email);
 	res.status(201).json({"message":stmt.changes +" record created: ID " + stmt.lastInsertRowid + " (201)"});
 });
 
@@ -42,14 +42,12 @@ app.get("/app/user/:id", (req, res) => {
 });
 
 // UPDATE a single user (HTTP method PATCH) at endpoint /app/update/user/:id
-//return location along with message 
 app.patch("/app/update/user/:id", (req, res) => {	
 	const stmt = db.prepare("UPDATE userinfo SET user = COALESCE(?,user), pass = COALESCE(?,pass) WHERE id = ?").run(req.body.user, md5(req.body.pass), req.params.id);
 	res.status(200).json({"message":stmt.changes +" record updated: ID " + req.params.id + " (200)"});
 });
 
 // DELETE a single user (HTTP method DELETE) at endpoint /app/delete/user/:id
-//return changes in message
 app.delete("/app/delete/user/:id", (req, res) => {	
 	const stmt = db.prepare("DELETE FROM userinfo WHERE id = ?").run(req.params.id);
 	res.status(200).json({"message":stmt.changes +" record deleted: ID " + req.params.id + " (200)"});
